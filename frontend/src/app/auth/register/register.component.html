@@ -1,0 +1,69 @@
+<div class="form-wrapper-s">
+  <div class="container">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="submit()"
+      class="my-5 mx-auto p-3 rounded shadow-lg bg-white form"
+      style="max-width: 500px"
+    >
+      <h1 class="h3 mb-3 mt-3 text-center fw-normal">Signup Account</h1>
+
+      <div class="form-group">
+        <input
+          formControlName="name"
+          type="text"
+          class="form-control mb-3"
+          placeholder="Name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          formControlName="email"
+          type="email"
+          class="form-control mb-3"
+          placeholder="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control mb-3"
+          placeholder="Password"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          formControlName="re_password"
+          type="password"
+          class="form-control mb-3"
+          placeholder="Confirm Password"
+          required
+        />
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input
+            formControlName="is_vendor"
+            form
+            type="checkbox"
+            value="is_vendor"
+            style="max-width: 50px"
+          />
+          Check here if registering as a Vendor
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg mk-btn" type="submit">Signup</button>
+      <small class="my-3"
+        >Already a member?
+        <a routerLink="/login">Login here..</a>
+      </small>
+    </form>
+  </div>
+</div>
